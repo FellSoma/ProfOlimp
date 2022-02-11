@@ -22,6 +22,15 @@ namespace ProfOlimp
         public ComparisonOfparameters()
         {
             InitializeComponent();
+
+            CalculateMoney calculate = new CalculateMoney();
+           
+            IncomeStability.Text = calculate.Stabile.ToString();
+            IncomeOptimale.Text = calculate.Optimale.ToString();
+            IncomeStandart.Text = calculate.Standart.ToString();
+
+            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

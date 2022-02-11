@@ -24,60 +24,60 @@ namespace ProfOlimp
             InitializeComponent();
 
 
-         
-        }
-        Int64 money,days,addmoney;
-        double Stabile;
-        double Optimale;
 
-        private void Exemple(object sender, RoutedEventArgs e)
+        }
+        Int64 money, days, addmoney;
+
+        private void Next(object sender, RoutedEventArgs e)
+        {
+            Window w = new ComparisonOfparameters();
+            w.Show();
+        }
+
+
+        public double Stabile;
+        public double Optimale;
+        public double Standart;
+        public int a;
+        public void Exemple(object sender, RoutedEventArgs e)
+        {
+            days = Convert.ToInt32(slDays.Value);
+            money = Convert.ToInt32(Money.Text);
+            addmoney = Convert.ToInt32(addMoney.Text);
+
+            Stabile = Convert.ToDouble((money * 8 * days / 365) / 100);
+            Optimale = Convert.ToDouble((money * 5 * days / 365) / 100);
+            Standart = Convert.ToDouble((money * 6 * days / 365) / 100);
+
+            tbStability.Text = "0";
+            tbOptimal.Text = "0";
+            tbStandart.Text = "0";
+
+            tbStability.Text = Stabile.ToString();
+            tbOptimal.Text = Optimale.ToString();
+            tbStandart.Text = Standart.ToString();
+        }
+        public bool culculate(out double Standart, out double Optimale, out double Stabile)
         {
 
-            try
-            {
-                days = Convert.ToInt32(slDays.Value);
-                money = Convert.ToInt32(Money.Text);
-                addmoney = Convert.ToInt32(addMoney.Text);
 
-            }
-            catch (Exception)
-            {
+            days = Convert.ToInt32(slDays.Value);
+            money = Convert.ToInt32(Money.Text);
+            addmoney = Convert.ToInt32(addMoney.Text);
 
-               
-            }
+             Stabile = Convert.ToDouble((money * 8 * days / 365) / 100);
+             Optimale = Convert.ToDouble((money * 5 * days / 365) / 100);
+             Standart = Convert.ToDouble((money * 6 * days / 365) / 100);
 
-            try
-            {
-                 Stabile = Convert.ToDouble((money * 8 * days/365)/100);
-                 Optimale = Convert.ToDouble((money * 5 * days / 365) / 100);
-                 Standart = Convert.ToDouble((money * 6 * days / 365) / 100);
+            tbStability.Text = "0";
+            tbOptimal.Text = "0";
+            tbStandart.Text = "0";
 
-            }
-            catch (Exception)
-            {
+            tbStability.Text = Stabile.ToString();
+            tbOptimal.Text = Optimale.ToString();
+            tbStandart.Text = Standart.ToString();
 
-               
-            }
-            try
-            {
-
-                tbStability.Text = "0";
-                tbOptimal.Text = "0";
-                tbStandart.Text = "0";
-
-                tbStability.Text = Stabile.ToString();
-                tbOptimal.Text = Optimale.ToString();
-                tbStandart.Text = Standart.ToString();
-            
-            }
-            catch (Exception)
-            {
-
-                
-            }
+            return true;
         }
-
-        double Standart;
-      
     }
 }
