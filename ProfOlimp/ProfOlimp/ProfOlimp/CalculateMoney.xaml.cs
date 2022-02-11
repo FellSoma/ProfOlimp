@@ -26,7 +26,7 @@ namespace ProfOlimp
 
          
         }
-        int money,days,addmoney;
+        Int64 money,days,addmoney;
         double Stabile;
         double Optimale;
 
@@ -48,9 +48,9 @@ namespace ProfOlimp
 
             try
             {
-                 Stabile = money * 0.08;
-                 Optimale = money * 0.05;
-                 Standart =money * 0.06;
+                 Stabile = Convert.ToDouble((money * 8 * days/365)/100);
+                 Optimale = Convert.ToDouble((money * 5 * days / 365) / 100);
+                 Standart = Convert.ToDouble((money * 6 * days / 365) / 100);
 
             }
             catch (Exception)
@@ -78,9 +78,6 @@ namespace ProfOlimp
         }
 
         double Standart;
-        private void ColorSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-
-        }
+      
     }
 }
