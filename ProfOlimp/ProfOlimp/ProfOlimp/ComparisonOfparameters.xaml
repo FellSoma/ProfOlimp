@@ -35,6 +35,7 @@
                     Grid.Row="0"
                     Grid.Column="0">
             <Button
+                x:Name="ExitBtn"
                 Content="Выход"
                 Margin="10,5,708,5.2"
                 Style="{StaticResource BlueBitton}" Width="72" Click="Button_Click" />
