@@ -94,6 +94,7 @@
     <Compile Include="ComparisonOfparameters.xaml.cs">
       <DependentUpon>ComparisonOfparameters.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataBase.cs" />
     <Compile Include="GeneralWindow.xaml.cs">
       <DependentUpon>GeneralWindow.xaml</DependentUpon>
     </Compile>

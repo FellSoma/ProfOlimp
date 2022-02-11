@@ -115,31 +115,33 @@
         <StackPanel Orientation="Vertical" 
                     Grid.Column="1" Grid.ColumnSpan="2" Margin="0,39,199.6,107.6" Grid.RowSpan="3">
             <TextBlock 
-        		        Text="Доход" 
-                        Foreground="Gray"
-        		        FontSize="20"
-        		        FontFamily="Arial" 
-        		        Height="31" 
-        		        Margin="0,10,0,0"
-                        TextAlignment="Center"
+        	   Text="Доход" 
+               Foreground="Gray"
+        	   FontSize="20"
+        	   FontFamily="Arial" 
+        	   Height="31" 
+        	   Margin="0,10,0,0"
+               TextAlignment="Center"
                         HorizontalAlignment="Center"/>
             <Border Background="Gray" 
                 Height="1" 
                 VerticalAlignment="Bottom"/>
             <TextBlock 
-        		        Text="45 845 Руб." 
-        		        FontSize="20"
-        		        FontFamily="Arial" 
-        		        Height="31" 
-        		        Margin="0,40,0,0"
-                        TextAlignment="Center"
-                        HorizontalAlignment="Center"/>
+        	    Text="45 845 Руб." 
+                Name="IncomeStability"
+        	    FontSize="20"
+        	    FontFamily="Arial" 
+        	    Height="31" 
+        	    Margin="0,40,0,0"
+                TextAlignment="Center"
+                HorizontalAlignment="Center"/>
             <Border Background="Gray" 
                     Height="1" 
                     VerticalAlignment="Bottom"
                     Margin="0,20,0,0"/>
             <TextBlock 
         		        Text="37 641 Руб." 
+                 Name="IncomeOptimale"
         		        FontSize="20"
         		        FontFamily="Arial" 
         		        Height="31" 
@@ -153,6 +155,7 @@
             <TextBlock 
         		        Text="40 502 Руб." 
         		        FontSize="20"
+                 Name="IncomeStandart"
         		        FontFamily="Arial" 
         		        Height="31" 
         		        Margin="0,40,0,0"
@@ -179,6 +182,7 @@
                 Height="1" 
                 VerticalAlignment="Bottom"/>
             <TextBlock 
+                x:Name="StabilityFinal"
         		        Text="645 845 Руб." 
         		        FontSize="20"
         		        FontFamily="Arial" 
@@ -191,6 +195,7 @@
                     VerticalAlignment="Bottom"
                     Margin="0,20,0,0"/>
             <TextBlock 
+                x:Name="OptimaleFinal"
         		        Text="637 641 Руб." 
         		        FontSize="20"
         		        FontFamily="Arial" 
@@ -203,6 +208,7 @@
                     VerticalAlignment="Bottom"
                     Margin="0,20,0,0"/>
             <TextBlock 
+                x:Name="StandartFinal"
         		        Text="640 502 Руб." 
         		        FontSize="20"
         		        FontFamily="Arial" 
@@ -233,7 +239,7 @@
                 Grid.Row="0"
                 Grid.ColumnSpan="5"/>
             <TextBlock 
-        		        Text="9,85 % Руб." 
+        		        Text="8 % Руб." 
         		        FontSize="20"
         		        FontFamily="Arial" 
         		        Height="31" 
@@ -245,7 +251,7 @@
                     VerticalAlignment="Bottom"
                     Margin="0,20,0,0"/>
             <TextBlock 
-        		        Text="6,1 % Руб." 
+        		        Text="6 % Руб." 
         		        FontSize="20"
         		        FontFamily="Arial" 
         		        Height="31" 
@@ -257,7 +263,7 @@
                     VerticalAlignment="Bottom"
                     Margin="0,20,0,0"/>
             <TextBlock 
-        		        Text="6,55 % Руб." 
+        		        Text="5 % Руб." 
         		        FontSize="20"
         		        FontFamily="Arial" 
         		        Height="31" 
@@ -318,7 +324,7 @@
 
         <StackPanel Grid.Row="2" Grid.ColumnSpan="5" Margin="0,0.4,0,-0.4">
             <Button
-                Content="Расчитать доход"
+                Content="Сформировать выписку"
                 Height="40"
                 Width="300"
                 Margin="0,20,0,0"

@@ -144,15 +144,13 @@
                     HorizontalAlignment="Left"/>
 
             </StackPanel>
-
-           
-                <Border
+            <Border
                     Width="300"
                     Height="500"
                     Background="White"
                     BorderThickness="1"
                     BorderBrush="DarkGray"
-                    Margin="40,0,0,0">
+                    Margin="40,34,0,35">
 
                 <StackPanel Orientation="Vertical">
 
@@ -166,7 +164,7 @@
                             Margin="24,0,186,0"/>
                     <TextBox Style="{StaticResource Textboxes}"
                              Width="250"
-                             Name="tbStability"
+                             x:Name="tbStability"
                              Text="0"/>
 
                     <TextBlock 
@@ -179,7 +177,7 @@
                             Margin="24,0,122,0"/>
                     <TextBox Style="{StaticResource Textboxes}"
                              Width="250"
-                             Name="tbOptimal"
+                             x:Name="tbOptimal"
                              Text="0"/>
 
                     <TextBlock 
@@ -192,21 +190,23 @@
                             Margin="24,0,122,0"/>
                     <TextBox Style="{StaticResource Textboxes}"
                              Width="250"
-                             Name="tbStandart"
-                             Text="0"/>
-                    
+                             x:Name="tbStandart"
+                             Text="0" Margin="24,10"/>
+
                     <Button 
                         Content=" Сравнить параметры"
                         Style="{StaticResource BlueBitton}"
                         Width="210"
                         Height="35"
                         Click="Exemple"
-                        Margin="0,10,0,0"/>
+                        Margin="0,20,0,0"/>
+                    <Button Click="Next"
+                            Height="30"/>
 
                 </StackPanel>
-                    
-                </Border>
-           
+
+            </Border>
+
         </StackPanel>
     </Grid>
 </Window>
