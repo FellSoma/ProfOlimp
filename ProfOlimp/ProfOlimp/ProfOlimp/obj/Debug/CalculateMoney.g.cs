@@ -41,25 +41,9 @@ namespace ProfOlimp {
     public partial class CalculateMoney : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 79 "..\..\CalculateMoney.xaml"
+        #line 78 "..\..\CalculateMoney.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Slider slSumm;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 107 "..\..\CalculateMoney.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Slider slDays;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 134 "..\..\CalculateMoney.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Slider slPlus;
+        internal System.Windows.Controls.Slider slValue;
         
         #line default
         #line hidden
@@ -95,13 +79,7 @@ namespace ProfOlimp {
             switch (connectionId)
             {
             case 1:
-            this.slSumm = ((System.Windows.Controls.Slider)(target));
-            return;
-            case 2:
-            this.slDays = ((System.Windows.Controls.Slider)(target));
-            return;
-            case 3:
-            this.slPlus = ((System.Windows.Controls.Slider)(target));
+            this.slValue = ((System.Windows.Controls.Slider)(target));
             return;
             }
             this._contentLoaded = true;

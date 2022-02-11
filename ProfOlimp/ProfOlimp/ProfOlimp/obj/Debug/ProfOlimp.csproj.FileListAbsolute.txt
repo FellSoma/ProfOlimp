@@ -17,3 +17,24 @@ H:\Рабочий стол\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\GeneralWindow
 H:\Рабочий стол\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp_MarkupCompile.lref
 H:\Рабочий стол\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\GeneralWindow.baml
 H:\Рабочий стол\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.csproj.CoreCompileInputs.cache
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\bin\Debug\ProfOlimp.exe.config
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\bin\Debug\ProfOlimp.exe
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\bin\Debug\ProfOlimp.pdb
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.csprojAssemblyReference.cache
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\MainWindow.baml
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\Themes\Buttons.baml
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\App.baml
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\CalculateMoney.g.cs
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\GeneralWindow.g.cs
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\MainWindow.g.cs
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\App.g.cs
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp_MarkupCompile.cache
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp_MarkupCompile.lref
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\CalculateMoney.baml
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\GeneralWindow.baml
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.g.resources
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.Properties.Resources.resources
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.csproj.GenerateResource.cache
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.csproj.CoreCompileInputs.cache
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.exe
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.pdb
