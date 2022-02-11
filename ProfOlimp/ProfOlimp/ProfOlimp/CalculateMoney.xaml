@@ -8,7 +8,23 @@
         Title="CalculateMoney" 
         Height="600" 
         Width="800"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        x:Name="Calc">
+
+        <Window.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty ="Height" TargetName ="Calc">
+                            <DoubleAnimation From="0" To="600"
+                                             RepeatBehavior="1x"
+                                             Duration="0:0:3"/>
+
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Window.Triggers>
 
     <Window.Resources>
         <Style TargetType="TextBox"

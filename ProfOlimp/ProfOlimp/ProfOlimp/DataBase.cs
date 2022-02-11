@@ -10,7 +10,9 @@ namespace ProfOlimp
     {
         public static string Stability;
         public static string Optimale;
-        public static string Standart;
-        public static int Money;
+        public static string Standart; 
+        public static int SumStabile;
+        public static int SumStandart;
+        public static int SumOptimale;
     }
 }

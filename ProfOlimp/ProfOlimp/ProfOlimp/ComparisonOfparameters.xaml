@@ -10,7 +10,23 @@
         Width="800"
         WindowStyle="None" 
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        x:Name="Calc">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard TargetProperty ="Height" TargetName ="Calc">
+                        <DoubleAnimation From="0" To="500"
+                                             RepeatBehavior="1x"
+                                             Duration="0:0:3"/>
+
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="13*"/>

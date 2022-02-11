@@ -8,6 +8,7 @@
         Title="GeneralWindow"
         Height="550" 
         Width="800"
+        WindowStartupLocation="CenterScreen"
         >
     <Grid>
         
