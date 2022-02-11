@@ -5,54 +5,195 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProfOlimp"
         mc:Ignorable="d"
-        Title="CalculateMoney" Height="550" 
+        Title="CalculateMoney" Height="600" 
         Width="800">
+
+    <Window.Resources>
+        <Style TargetType="TextBox"
+            x:Key="Textboxes">
+            <Setter Property="Margin" Value="0,10,0,10"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="DarkGray"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+
+                        <Grid x:Name="root" 
+                              Width="{TemplateBinding Property=Width}"
+                                    Height="{TemplateBinding Property=Height}"
+                              SnapsToDevicePixels="True">
+                            <Border x:Name="background"
+                                    Background="White"
+                                    Width="{TemplateBinding Property=Width}"
+                                    Height="{TemplateBinding Property=Height}" />
+
+                            <Border Background="Black" Height="1" VerticalAlignment="Bottom"/>
+
+                            <ScrollViewer x:Name="PART_ContentHost"                                         
+                                          BorderThickness="1"
+                                          Background="Transparent"
+                                          Padding="{TemplateBinding Padding}"
+                                          IsTabStop="False"
+                                          Margin="0,9,0,6"
+                                          FontSize="18"
+                                          TextElement.Foreground="{TemplateBinding Foreground}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <StackPanel 
             Orientation="Horizontal" >
-            <StackPanel Orientation="Vertical">
+            <StackPanel 
+                Orientation="Vertical"
+                Width="400">
 
                 <TextBlock 
                     FontSize="30"
                     HorizontalAlignment="Center"
-                    Text="Рассчитать доход"/>
+                    Text="Рассчитать доход"
+                    Margin="20"/>
 
                 <TextBlock Text="Сумма"
-                           FontSize="18"/>
+                           FontSize="18"
+                            Margin="20,20,0,0"/>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox
-                        Width="200"/>
+                        Text="{Binding ElementName=slSumm, Path=Value, UpdateSourceTrigger=PropertyChanged}"
+                        Width="200"
+                        FontSize="15"
+                        Margin="20,10,0,10"/>
                     <TextBlock 
                         Text="Руб."
-                        FontSize="19"/>
+                        FontSize="19"
+                        Margin="0,10,0,10"/>
                 </StackPanel>
                 <Slider
                     Minimum="1000" 
-                    Maximum="10000000"/>
+                    Name="slSumm"
+                    Maximum="10000000"
+                    Margin="20,0,0,20"
+                    Width="300"
+                    TickFrequency="100" 
+                    IsSnapToTickEnabled="True"
+                    HorizontalAlignment="Left"/>
 
-                <TextBlock 
-                    FontSize="30"
-                    HorizontalAlignment="Center"
-                    Text="Рассчитать доход"/>
+               
 
                 <TextBlock Text="Срок"
-                           FontSize="18"/>
+                           FontSize="18"
+                            Margin="20,20,0,0"/>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox
-                        Width="200"/>
+                        Text="{Binding ElementName=slDays, Path=Value, UpdateSourceTrigger=PropertyChanged}"
+                        Width="200"
+                        FontSize="15"
+                        Margin="20,10,0,10"/>
                     <TextBlock 
-                        Text="Дней."
-                        FontSize="19"/>
+                        Text="дней"
+                        FontSize="19"
+                        Margin="0,10,0,10"/>
                 </StackPanel>
                 <Slider
                     Minimum="30" 
-                    Maximum="1826"/>
+                    Maximum="1826"
+                    Name="slDays"
+                    Margin="20,0,0,20"
+                    TickFrequency="1"
+                    IsSnapToTickEnabled="True"
+                    Width="300"
+                    HorizontalAlignment="Left"/>
+
+
+                <TextBlock Text="Ежемесячное пополнение"
+                           FontSize="18"
+                           Margin="20,20,0,0"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBox
+                        Text="{Binding ElementName=slPlus, Path=Value, UpdateSourceTrigger=PropertyChanged}"
+                        Width="200"
+                        FontSize="15"
+                        Margin="20,10,0,10"/>
+                    <TextBlock 
+                        Text="Руб."
+                        FontSize="19"
+                        Margin="0,10,0,10"/>
+                </StackPanel>
+                <Slider
+                    Minimum="0" 
+                    Maximum="5000000"
+                    TickFrequency="100" 
+                    Name="slPlus"
+                    IsSnapToTickEnabled="True"
+                    Margin="20,0,0,20"
+                    Width="300"
+                    HorizontalAlignment="Left"/>
 
             </StackPanel>
-            
-            
+
+           
+                <Border
+                    Width="300"
+                    Height="500"
+                    Background="White"
+                    BorderThickness="1"
+                    BorderBrush="DarkGray"
+                    Margin="40,0,0,0">
+
+                <StackPanel Orientation="Vertical">
+
+                    <TextBlock 
+                    FontSize="30"
+                    HorizontalAlignment="Left"
+                    Text="Стабильный"
+                        Margin="20,20,0,0"/>
+                    <TextBlock Text="Доход:"
+                           FontSize="18"
+                            Margin="24,0,186,0"/>
+                    <TextBox Style="{StaticResource Textboxes}"
+                             Width="250"/>
+
+                    <TextBlock 
+                    FontSize="30"
+                    HorizontalAlignment="Left"
+                    Text="Оптимальный"
+                        Margin="20,10,0,0"/>
+                    <TextBlock Text="Доход по вкладу:"
+                           FontSize="18"
+                            Margin="24,0,122,0"/>
+                    <TextBox Style="{StaticResource Textboxes}"
+                             Width="250"/>
+
+                    <TextBlock 
+                    FontSize="30"
+                    HorizontalAlignment="Left"
+                    Text="Стандарт"
+                        Margin="20,10,0,0"/>
+                    <TextBlock Text="Доход по вкладу:"
+                           FontSize="18"
+                            Margin="24,0,122,0"/>
+                    <TextBox Style="{StaticResource Textboxes}"
+                             Width="250"/>
+                    
+                    <Button 
+                        Content=" Сравнить параметры"
+                        Style="{StaticResource BlueBitton}"
+                        Width="210"
+                        Height="35"
+                        Margin="0,10,0,0"/>
+
+                </StackPanel>
+                    
+                </Border>
+           
         </StackPanel>
     </Grid>
 </Window>
