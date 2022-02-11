@@ -67,9 +67,9 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox
-                        Text="{Binding ElementName=slSumm, Path=Value, UpdateSourceTrigger=PropertyChanged}"
+                        Text="{Binding Value, ElementName=slSumm, UpdateSourceTrigger=PropertyChanged}"
                         Width="200"
-                        Name="Money"
+                        x:Name="Money"
                         FontSize="15"
                         Margin="20,10,0,10"/>
                     <TextBlock 
@@ -79,15 +79,17 @@
                 </StackPanel>
                 <Slider
                     Minimum="1000" 
-                    Name="slSumm"
+                    x:Name="slSumm"
                     Maximum="10000000"
                     Margin="20,0,0,20"
                     Width="300"
+                    Value="1000000"
                     TickFrequency="100" 
-                    IsSnapToTickEnabled="True"
-                    HorizontalAlignment="Left"/>
+                    IsSnapToTickEnabled="True"                  
+                    HorizontalAlignment="Left" 
+                    ValueChanged="slAll_ValueChanged"/>
 
-               
+
 
                 <TextBlock Text="Срок"
                            FontSize="18"
@@ -95,9 +97,9 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox
-                        Text="{Binding ElementName=slDays, Path=Value, UpdateSourceTrigger=PropertyChanged}"
+                        Text="{Binding Value, ElementName=slDays, UpdateSourceTrigger=PropertyChanged}"
                         Width="200"
-                        Name="Days"
+                        x:Name="Days"
                         FontSize="15"
                         Margin="20,10,0,10"/>
                     <TextBlock 
@@ -109,12 +111,13 @@
                     Minimum="90" 
                     Maximum="1826"
                     Value="365"
-                    Name="slDays"
-                    Margin="20,0,0,20"
+                    x:Name="slDays"
+                    Margin="20,0,0,20"             
                     TickFrequency="1"
                     IsSnapToTickEnabled="True"
                     Width="300"
-                    HorizontalAlignment="Left"/>
+                    HorizontalAlignment="Left"
+                    ValueChanged="slAll_ValueChanged"/>
 
 
                 <TextBlock Text="Ежемесячное пополнение"
@@ -123,10 +126,10 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox
-                        Text="{Binding ElementName=slPlus, Path=Value, UpdateSourceTrigger=PropertyChanged}"
+                        Text="{Binding Value, ElementName=slPlus, UpdateSourceTrigger=PropertyChanged}"
                         Width="200"
                         FontSize="15"
-                        Name="addMoney"
+                        x:Name="addMoney"
                         Margin="20,10,0,10"/>
                     <TextBlock 
                         Text="Руб."
@@ -137,11 +140,12 @@
                     Minimum="0" 
                     Maximum="5000000"
                     TickFrequency="100" 
-                    Name="slPlus"
+                    x:Name="slPlus"
                     IsSnapToTickEnabled="True"
                     Margin="20,0,0,20"
-                    Width="300"
-                    HorizontalAlignment="Left"/>
+                    Width="300"     
+                    HorizontalAlignment="Left"
+                    ValueChanged="slAll_ValueChanged"/>
 
             </StackPanel>
             <Border
@@ -200,8 +204,6 @@
                         Height="35"
                         Click="Exemple"
                         Margin="0,20,0,0"/>
-                    <Button Click="Next"
-                            Height="30"/>
 
                 </StackPanel>
 
