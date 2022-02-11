@@ -4,17 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\
+=======
+B:\GitProject\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\
+>>>>>>> 1dcec2705f811024195d7b619493871fe1ab645c
 ProfOlimp
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\App.xaml
 4-357634814
 
 7-1394329275
+=======
+B:\GitProject\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\App.xaml
+4-357634814
+
+8-841943078
+>>>>>>> 1dcec2705f811024195d7b619493871fe1ab645c
 12-1401562060
 CalculateMoney.xaml;GeneralWindow.xaml;MainWindow.xaml;Themes\Buttons.xaml;
 
-False
+True
 
