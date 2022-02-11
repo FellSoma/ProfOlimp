@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-B:\GitProject\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\
 ProfOlimp
 none
 false
 DEBUG;TRACE
-B:\GitProject\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\App.xaml
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\App.xaml
 51141252769
 
 10-177131048
 12-1401562060
 CalculateMoney.xaml;ComparisonOfparameters.xaml;GeneralWindow.xaml;MainWindow.xaml;Themes\Buttons.xaml;
 
-False
+True
 

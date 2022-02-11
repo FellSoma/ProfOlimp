@@ -5,7 +5,8 @@
         Height="400" 
         Width="350"
         WindowStyle="None"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="TextBox"
             x:Key="Textboxes">
