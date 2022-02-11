@@ -1,0 +1,122 @@
+﻿<Window x:Class="ProfOlimp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" 
+        Height="400" 
+        Width="350"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBox"
+            x:Key="Textboxes">
+            <Setter Property="Margin" Value="0,10,0,30"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="DarkGray"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+
+                        <Grid x:Name="root" 
+                              Width="{TemplateBinding Property=Width}"
+                                    Height="{TemplateBinding Property=Height}"
+                              SnapsToDevicePixels="True">
+                            <Border x:Name="background"
+                                    Background="White"
+                                    Width="{TemplateBinding Property=Width}"
+                                    Height="{TemplateBinding Property=Height}" />
+                            
+                            <Border Background="Black" Height="1" VerticalAlignment="Bottom"/>
+
+                            <ScrollViewer x:Name="PART_ContentHost"                                         
+                                          BorderThickness="1"
+                                          Background="Transparent"
+                                          Padding="{TemplateBinding Padding}"
+                                          IsTabStop="False"
+                                          Margin="0,9,0,6"
+                                          FontSize="18"
+                                          TextElement.Foreground="{TemplateBinding Foreground}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            
+            <TextBlock 
+                Text="Авторизация"
+                HorizontalAlignment="Center"
+                Margin="0,20,0,0"
+                FontSize="19"
+                FontWeight="Medium"/>
+            
+            <TextBlock
+                Text="Логин"
+                Margin="20,20,0,0"
+                FontSize="19"
+                FontWeight="Medium"/>
+            <TextBox
+                Name="LoginTb"
+                Width="300"
+                Foreground="Black"
+                Style="{StaticResource Textboxes}"/>
+            <TextBlock
+            	Text="Пароль"
+            	Margin="20,10,0,0"
+            	FontSize="19"
+            	FontWeight="Medium"/>
+            <TextBox
+                Name="PasswordTb"
+                Width="300"
+                Foreground="Black"
+                Style="{StaticResource Textboxes}"/>
+            <Button
+                Height="30"
+                Width="200"
+                Content="Вход"
+                Style="{StaticResource BlueBitton}"/>
+        </StackPanel>
+        <TextBlock IsHitTestVisible="False"
+                       Text="Логин"
+                       VerticalAlignment="Center"                                       
+                       Margin="28,110,-8,266"  
+                       FontSize="18"
+                       Foreground="DarkGray">
+
+            <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=LoginTb}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+
+        <TextBlock 
+            IsHitTestVisible="False"
+            Text="Пароль"
+            VerticalAlignment="Center"                                       
+            Margin="28,225,-8,151"  
+            FontSize="18"
+            Foreground="DarkGray">
+
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=PasswordTb}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+    </Grid>
+</Window>
