@@ -16,7 +16,7 @@
                 <EventTrigger.Actions>
                     <BeginStoryboard>
                         <Storyboard TargetProperty ="Height" TargetName ="Calc">
-                            <DoubleAnimation From="0" To="600"
+                            <DoubleAnimation From="0" To="620"
                                              RepeatBehavior="1x"
                                              Duration="0:0:3"/>
 

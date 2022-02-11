@@ -74,13 +74,23 @@ namespace ProfOlimp
                     tbStability.Text = Stabile.ToString();
                     tbOptimal.Text = Optimale.ToString();
                     tbStandart.Text = Standart.ToString();
+
+
                 }
             
             }
         }
 
+        private void CloseMe(Object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
         private void Exemple(object sender, RoutedEventArgs e)
         {
+            Window we = new GeneralWindow();
+            we.Closing += CloseMe;
             DataBase.Stability = tbStability.Text;
             DataBase.Optimale = tbOptimal.Text;
             DataBase.Standart = tbStandart.Text;

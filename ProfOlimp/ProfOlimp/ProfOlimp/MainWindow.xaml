@@ -45,79 +45,84 @@
             </Setter>
         </Style>
     </Window.Resources>
+    <Border BorderThickness="2"
+            BorderBrush="DarkGray">
+
     <Grid>
         <StackPanel Orientation="Vertical">
             
-            <TextBlock 
-                Text="Авторизация"
-                HorizontalAlignment="Center"
-                Margin="0,20,0,0"
-                FontSize="19"
-                FontWeight="Medium"/>
+                <TextBlock 
+                    Text="Авторизация"
+                    HorizontalAlignment="Center"
+                    Margin="0,20,0,0"
+                    FontSize="19"
+                    FontWeight="Medium"/>
             
-            <TextBlock
-                Text="Логин"
-                Margin="20,20,0,0"
-                FontSize="19"
-                FontWeight="Medium"/>
-            <TextBox
-                Name="LoginTb"
-                Width="300"
-                Foreground="Black"
-                Style="{StaticResource Textboxes}"/>
-            <TextBlock
-            	Text="Пароль"
-            	Margin="20,10,0,0"
-            	FontSize="19"
-            	FontWeight="Medium"/>
-            <TextBox
-                Name="PasswordTb"
-                Width="300"
-                Foreground="Black"
-                Style="{StaticResource Textboxes}"/>
-            <Button
-                Height="30"
-                Width="200"
-                Content="Вход"
-                Style="{StaticResource BlueBitton}"/>
-        </StackPanel>
-        <TextBlock IsHitTestVisible="False"
-                       Text="Логин"
-                       VerticalAlignment="Center"                                       
-                       Margin="28,110,-8,266"  
-                       FontSize="18"
-                       Foreground="DarkGray">
+                <TextBlock
+                    Text="Логин"
+                    Margin="20,20,0,0"
+                    FontSize="19"
+                    FontWeight="Medium"/>
+                <TextBox
+                    Name="LoginTb"
+                    Width="300"
+                    Foreground="Black"
+                    Style="{StaticResource Textboxes}"/>
+                <TextBlock
+            	    Text="Пароль"
+            	    Margin="20,10,0,0"
+            	    FontSize="19"
+            	    FontWeight="Medium"/>
+                <TextBox
+                    Name="PasswordTb"
+                    Width="300"
+                    Foreground="Black"
+                    Style="{StaticResource Textboxes}"/>
+                <Button
+                    Height="30"
+                    Width="200"
+                    Content="Вход"
+                    Style="{StaticResource BlueBitton}"/>
+            </StackPanel>
+            <TextBlock IsHitTestVisible="False"
+                           Text="Логин"
+                           VerticalAlignment="Center"                                       
+                           Margin="28,110,-8,266"  
+                           FontSize="18"
+                           Foreground="DarkGray">
 
-            <TextBlock.Style>
+                <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=LoginTb}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+
+            <TextBlock 
+                IsHitTestVisible="False"
+                Text="Пароль"
+                VerticalAlignment="Center"                                       
+                Margin="28,225,-8,151"  
+                FontSize="18"
+                Foreground="DarkGray">
+
+                <TextBlock.Style>
                     <Style TargetType="{x:Type TextBlock}">
                         <Setter Property="Visibility" Value="Collapsed"/>
                         <Style.Triggers>
-                        <DataTrigger Binding="{Binding Text, ElementName=LoginTb}" Value="">
+                            <DataTrigger Binding="{Binding Text, ElementName=PasswordTb}" Value="">
                                 <Setter Property="Visibility" Value="Visible"/>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </TextBlock.Style>
             </TextBlock>
+        </Grid>
 
-        <TextBlock 
-            IsHitTestVisible="False"
-            Text="Пароль"
-            VerticalAlignment="Center"                                       
-            Margin="28,225,-8,151"  
-            FontSize="18"
-            Foreground="DarkGray">
-
-            <TextBlock.Style>
-                <Style TargetType="{x:Type TextBlock}">
-                    <Setter Property="Visibility" Value="Collapsed"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Text, ElementName=PasswordTb}" Value="">
-                            <Setter Property="Visibility" Value="Visible"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBlock.Style>
-        </TextBlock>
-    </Grid>
+    </Border>
 </Window>
