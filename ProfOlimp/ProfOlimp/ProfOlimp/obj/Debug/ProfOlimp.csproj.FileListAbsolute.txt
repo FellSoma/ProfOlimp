@@ -38,3 +38,5 @@ I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.csproj.Ge
 I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.csproj.CoreCompileInputs.cache
 I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.exe
 I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ProfOlimp.pdb
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ComparisonOfparameters.g.cs
+I:\OurGits\ProfOlimp\ProfOlimp\ProfOlimp\ProfOlimp\obj\Debug\ComparisonOfparameters.baml

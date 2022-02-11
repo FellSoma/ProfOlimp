@@ -22,6 +22,65 @@ namespace ProfOlimp
         public CalculateMoney()
         {
             InitializeComponent();
+
+
+         
+        }
+        int money,days,addmoney;
+        double Stabile;
+        double Optimale;
+
+        private void Exemple(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                days = Convert.ToInt32(slDays.Value);
+                money = Convert.ToInt32(Money.Text);
+                addmoney = Convert.ToInt32(addMoney.Text);
+
+            }
+            catch (Exception)
+            {
+
+               
+            }
+
+            try
+            {
+                 Stabile = money * 0.08;
+                 Optimale = money * 0.05;
+                 Standart =money * 0.06;
+
+            }
+            catch (Exception)
+            {
+
+               
+            }
+            try
+            {
+
+                tbStability.Text = "0";
+                tbOptimal.Text = "0";
+                tbStandart.Text = "0";
+
+                tbStability.Text = Stabile.ToString();
+                tbOptimal.Text = Optimale.ToString();
+                tbStandart.Text = Standart.ToString();
+            
+            }
+            catch (Exception)
+            {
+
+                
+            }
+        }
+
+        double Standart;
+        private void ColorSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
         }
     }
 }
