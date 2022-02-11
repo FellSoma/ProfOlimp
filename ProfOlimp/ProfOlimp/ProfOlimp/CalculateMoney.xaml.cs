@@ -81,6 +81,12 @@ namespace ProfOlimp
 
         private void Exemple(object sender, RoutedEventArgs e)
         {
+            DataBase.Stability = tbStability.Text;
+            DataBase.Optimale = tbOptimal.Text;
+            DataBase.Standart = tbStandart.Text;
+            DataBase.SumOptimale = SumOptimale;
+            DataBase.SumStandart = SumStandart;
+            DataBase.SumStabile = SumStabile;
             Window w = new ComparisonOfparameters();
             w.Show();
         }

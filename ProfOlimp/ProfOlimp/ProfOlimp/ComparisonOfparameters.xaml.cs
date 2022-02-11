@@ -25,6 +25,9 @@ namespace ProfOlimp
 
             CalculateMoney calculate = new CalculateMoney();
 
+            StabilityFinal.Text = DataBase.SumStabile.ToString();
+            OptimaleFinal.Text = DataBase.SumOptimale.ToString();
+            StandartFinal.Text = DataBase.SumStandart.ToString();
             IncomeStability.Text = DataBase.Stability;
             IncomeOptimale.Text = DataBase.Optimale;
             IncomeStandart.Text = DataBase.Standart;
