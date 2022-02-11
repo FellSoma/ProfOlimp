@@ -35,7 +35,13 @@ namespace ProfOlimp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
 
+        private void Next(object sender, RoutedEventArgs e)
+        {
+            Window w = new MainWindow();
+            w.Show();
         }
     }
 }
